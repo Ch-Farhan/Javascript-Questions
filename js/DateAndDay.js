@@ -63,39 +63,54 @@
 // checkLeapYear(year);
 
 //Question#7
-let s = `Enter the value of Year1 
-        and Year2 in the input box to get 
-        year's having Sunday on 1st January`;
+// let s = `Enter the value of Year1 
+//         and Year2 in the input box to get 
+//         year's having Sunday on 1st January`;
 
-document.getElementById("geeks")
-    .innerHTML = `<p>${s}</p>`;
+// document.getElementById("geeks")
+//     .innerHTML = `<p>${s}</p>`;
 
-function GFG_Fun() {
-    var y1 = Number(document
-        .getElementById('year1').value);
+// function GFG_Fun() {
+//     var y1 = Number(document
+//         .getElementById('year1').value);
 
-    var y2 = Number(document
-        .getElementById('year2').value);
+//     var y2 = Number(document
+//         .getElementById('year2').value);
 
-    var res = " ";
+//     var res = " ";
 
-    for (let year = y1; year <= y2; ++year) {
-        const c_year = new Date(year, 0, 1);
-        if (c_year.getDay() === 0) {
-            res += year + ", ";
-        }
-    }
+//     for (let year = y1; year <= y2; ++year) {
+//         const c_year = new Date(year, 0, 1);
+//         if (c_year.getDay() === 0) {
+//             res += year + ", ";
+//         }
+//     }
 
-    if (y1 > y2) {
-        document.getElementById('gfg').innerHTML = "Year2 must be greater than Year1";
+//     if (y1 > y2) {
+//         document.getElementById('gfg').innerHTML = "Year2 must be greater than Year1";
+//     } else {
+//         if (res === " ") {
+//             document.getElementById('gfg')
+//                 .innerHTML = `<p>No Year Exist</p>`;
+//         } else {
+//             document.getElementById('gfg')
+//                 .innerHTML = `<p> Year having 
+//                     Sunday on 1st January are :${res}</p>`;
+//         }
+//     }
+// }
+
+//Question#7
+function guess() {
+    var num = parseInt(Math.random() * 10 + 1);
+    var userGuess = prompt("Input a guess number between 1 to 10");
+    if (isNaN(userGuess)) {
+        alert("Please, write a number");
     } else {
-        if (res === " ") {
-            document.getElementById('gfg')
-                .innerHTML = `<p>No Year Exist</p>`;
+        if (num == userGuess) {
+            alert("Wow you guessed it :D");
         } else {
-            document.getElementById('gfg')
-                .innerHTML = `<p> Year having 
-                    Sunday on 1st January are :${res}</p>`;
+            alert("Not matched. Number was " + num);
         }
     }
 }
