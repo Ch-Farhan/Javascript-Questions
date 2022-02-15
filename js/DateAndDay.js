@@ -36,15 +36,29 @@
 // document.writeln('Area=' + area);
 
 //Question#5
-var myVar = setInterval(myFunction, 1000);
+// var myVar = setInterval(myFunction, 1000);
+// var word = 'w3resource';
+// var newArray = word.split('');
 
-var word = 'w3resource';
-var newArray = word.split('');
+// function myFunction() {
+//     var letter = newArray.pop();
+//     var newWord = newArray.unshift(letter);
+//     var theWord = newArray.join('');
+//     console.log(theWord);
+//     document.getElementById('rotate').innerHTML = theWord;
+// }
 
-function myFunction() {
-    var letter = newArray.pop();
-    var newWord = newArray.unshift(letter);
-    var theWord = newArray.join('');
-    console.log(theWord);
-    document.getElementById('rotate').innerHTML = theWord;
+//Question#6
+// program to check leap year
+function checkLeapYear(year) {
+    //three conditions to find out the leap year
+    if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
+        console.log(year + ' is a leap year');
+    } else {
+        console.log(year + ' is not a leap year');
+    }
 }
+// take input
+const year = prompt('Enter a year:');
+checkLeapYear(year);
+// document.write('Year=' + year);
