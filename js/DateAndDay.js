@@ -196,9 +196,20 @@
 // console.log(x[my_var]);
 
 // Question14
-function checkFileExtension() {
-    fileName = document.querySelector('#file1').value;
-    extension = fileName.split('.').pop();
-    document.querySelector('.output')
-        .textContent = extension;
-};
+// function checkFileExtension() {
+//     fileName = document.querySelector('#file1').value;
+//     extension = fileName.split('.').pop();
+//     document.querySelector('.output')
+//         .textContent = extension;
+// };
+
+// Question15
+function diff(num) {
+    if (num <= 13) // if given number is less than or eual to 13 
+        return 13 - num; // then calculate the difference b/w the given number and 13
+    else
+        return (num - 13) * 2; // else if the num is greater than 13 then return double the absolute difference
+}
+
+console.log(diff(23));
+console.log(diff(10));
