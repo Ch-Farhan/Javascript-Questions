@@ -168,12 +168,17 @@
 // Question11
 /* When the input field receives input, convert the value from fahrenheit to celsius */
 // fahrenheit to celsius
-function temperatureConverter(valNum) {
-    valNum = parseFloat(valNum);
-    document.getElementById("outputCelcius").innerHTML = (valNum - 32) / 1.8;
-}
+// function temperatureConverter(valNum) {
+//     valNum = parseFloat(valNum);
+//     document.getElementById("outputCelcius").innerHTML = (valNum - 32) / 1.8;
+// }
+
 // celsius to fahrenheit 
 // function temperatureConverter(valNum) {
 //     valNum = parseFloat(valNum);
 //     document.getElementById("outputFahrenheit").innerHTML = (valNum * 1.8) + 32;
 // }
+
+// Question12
+document.getElementById("CurrentURL").innerHTML =
+    "The full URL of this page is:<br>" + window.location.href;
