@@ -126,22 +126,47 @@ mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
     <!-- 
         10. Write a JavaScript program to calculate multiplication and division of two numbers (input from user).
      -->
-    <section>
+    <!-- <section>
         <fieldset>
             <legend>Sample form :</legend>
-            <!-- <form> -->
             1st Number :&nbsp; <input type="text" id="fn" /> <br><br> 2nd Number:&nbsp; <input type="text" id="sn" /><br>
-            <!-- </form> -->
             <br>
             <input type="button" onClick="multiplyBy()" Value="Multiply" />
             <input type="button" onClick="divideBy()" Value="Divide" />
-
             <p>The Result is : <br>
                 <span id="result"></span>
             </p>
         </fieldset>
         <script src="js/DateAndDay.js"></script>
+    </section> -->
+
+    <!-- 
+        11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.
+     -->
+    <section>
+
+        <h2>Temperature Converter</h2>
+        <p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+
+        <p>
+            <label>Fahrenheit</label>
+            <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+        </p>
+        <p>Celcius: <span id="outputCelcius"></span></p>
+        <script src="js/DateAndDay.js"></script>
     </section>
+
+    <!-- <section>
+        <h2>Temperature Converter</h2>
+        <p>Type a value in the Celsius field to convert the value to Fahrenheit:</p>
+
+        <p>
+            <label>Celsius</label>
+            <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+        </p>
+        <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+        <script src="js/DateAndDay.js"></script>
+    </section> -->
 </body>
 
 </html>

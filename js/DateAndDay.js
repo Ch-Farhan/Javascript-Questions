@@ -153,14 +153,27 @@
 //     " days remaining until Christmas.");
 
 // Question10
-function multiplyBy() {
-    num1 = document.getElementById("fn").value;
-    num2 = document.getElementById("sn").value;
-    document.getElementById("result").innerHTML = num1 * num2;
-}
+// function multiplyBy() {
+//     num1 = document.getElementById("fn").value;
+//     num2 = document.getElementById("sn").value;
+//     document.getElementById("result").innerHTML = num1 * num2;
+// }
 
-function divideBy() {
-    num1 = document.getElementById("fn").value;
-    num2 = document.getElementById("sn").value;
-    document.getElementById("result").innerHTML = num1 / num2;
+// function divideBy() {
+//     num1 = document.getElementById("fn").value;
+//     num2 = document.getElementById("sn").value;
+//     document.getElementById("result").innerHTML = num1 / num2;
+// }
+
+// Question11
+/* When the input field receives input, convert the value from fahrenheit to celsius */
+// fahrenheit to celsius
+function temperatureConverter(valNum) {
+    valNum = parseFloat(valNum);
+    document.getElementById("outputCelcius").innerHTML = (valNum - 32) / 1.8;
 }
+// celsius to fahrenheit 
+// function temperatureConverter(valNum) {
+//     valNum = parseFloat(valNum);
+//     document.getElementById("outputFahrenheit").innerHTML = (valNum * 1.8) + 32;
+// }
