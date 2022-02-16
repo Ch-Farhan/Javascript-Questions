@@ -225,13 +225,31 @@
 // console.log(triple(20, 20));
 
 // Question17
-function diff_num(n) {
-    if (n <= 19) {
-        return (19 - n);
+// function diff_num(n) {
+//     if (n <= 19) {
+//         return (19 - n);
+//     } else {
+//         return (n - 19) * 3;
+//     }
+// }
+// console.log(diff_num(12));
+// console.log(diff_num(19));
+// console.log(diff_num(22));
+
+// Question18
+function diff_num(num1, num2) {
+    if (num1 == 50 || num2 == 50 || num1 + num2 == 50) {
+        return true;
     } else {
-        return (n - 19) * 3;
+        return false;
     }
 }
-console.log(diff_num(12));
-console.log(diff_num(19));
-console.log(diff_num(22));
+console.log(diff_num(10, 40));
+console.log(diff_num(50, 50));
+console.log(diff_num(50, 15));
+console.log(diff_num(220, 202));
+//  2nd Solution
+console.log(diff_num(50, 50));
+console.log(diff_num(20, 50));
+console.log(diff_num(20, 20));
+console.log(diff_num(20, 30));
