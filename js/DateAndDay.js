@@ -115,7 +115,7 @@
 //     }
 // }
 
-// Question9
+// Question#9
 // Get the current date
 // let today = new Date();
 
@@ -152,7 +152,7 @@
 // document.write("There are " + remainingDays +
 //     " days remaining until Christmas.");
 
-// Question10
+// Question#10
 // function multiplyBy() {
 //     num1 = document.getElementById("fn").value;
 //     num2 = document.getElementById("sn").value;
@@ -224,7 +224,7 @@
 // console.log(triple(10, 20));
 // console.log(triple(20, 20));
 
-// Question17
+// Question18
 // function diff_num(n) {
 //     if (n <= 19) {
 //         return (19 - n);
@@ -236,7 +236,7 @@
 // console.log(diff_num(19));
 // console.log(diff_num(22));
 
-// Question18
+// Question19
 // function diff_num(num1, num2) {
 //     if (num1 == 50 || num2 == 50 || num1 + num2 == 50) {
 //         return true;
@@ -255,16 +255,26 @@
 // console.log(diff_num(20, 20));
 // console.log(diff_num(20, 30));
 
-// Question19
-function positive_negative(num1, num2) {
-    if (num1 > 0 && num2 < 0 || num1 < 0 && num2 > 0) {
-        return true;
-    } else {
-        return false;
-    }
-}
+// Question20
+// function positive_negative(num1, num2) {
+//     if (num1 > 0 && num2 < 0 || num1 < 0 && num2 > 0) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-console.log(positive_negative(2, 2));
-console.log(positive_negative(-2, 2));
-console.log(positive_negative(2, -2));
-console.log(positive_negative(-2, -2));
+// console.log(positive_negative(2, 2));
+// console.log(positive_negative(-2, 2));
+// console.log(positive_negative(2, -2));
+// console.log(positive_negative(-2, -2));
+
+// Question21
+function string_check(str1) {
+    if (str1 === null || str1 === undefined || str1.substring(0, 2) === 'Py') {
+        return str1;
+    }
+    return "Py" + str1;
+}
+console.log(string_check("Python"));
+console.log(string_check("thon"));
