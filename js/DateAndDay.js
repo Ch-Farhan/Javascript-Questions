@@ -256,24 +256,15 @@
 // console.log(diff_num(20, 30));
 
 // Question19
-function diff_num(num) {
-    if (num >= 20 && num <= 100 || num == 400) {
+function positive_negative(num1, num2) {
+    if (num1 > 0 && num2 < 0 || num1 < 0 && num2 > 0) {
         return true;
     } else {
         return false;
     }
 }
-console.log(diff_num(10));
-console.log(diff_num(20));
-console.log(diff_num(50));
-console.log(diff_num(100));
-console.log(diff_num(101));
-console.log(diff_num(400));
-console.log(diff_num(4070));
 
-//  2nd Solution/Output
-console.log(diff_num(10));
-console.log(diff_num(90));
-console.log(diff_num(99));
-console.log(diff_num(199));
-console.log(diff_num(200));
+console.log(positive_negative(2, 2));
+console.log(positive_negative(-2, 2));
+console.log(positive_negative(2, -2));
+console.log(positive_negative(-2, -2));
