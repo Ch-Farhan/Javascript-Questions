@@ -185,12 +185,20 @@
 
 // Question13
 // A user-defined variable created
-let my_var = "userVariable";
-let my_value = "userValue";
+// let my_var = "userVariable";
+// let my_value = "userValue";
 
-let x = {
-    // Assign value of a user-defined variable
-    [my_var]: my_value,
+// let x = {
+// Assign value of a user-defined variable
+//     [my_var]: my_value,
+// };
+// console.log(x);
+// console.log(x[my_var]);
+
+// Question14
+function checkFileExtension() {
+    fileName = document.querySelector('#file1').value;
+    extension = fileName.split('.').pop();
+    document.querySelector('.output')
+        .textContent = extension;
 };
-console.log(x);
-console.log(x[my_var]);
