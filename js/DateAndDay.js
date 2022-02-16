@@ -180,5 +180,17 @@
 // }
 
 // Question12
-document.getElementById("CurrentURL").innerHTML =
-    "The full URL of this page is:<br>" + window.location.href;
+// document.getElementById("CurrentURL").innerHTML =
+//     "The full URL of this page is:<br>" + window.location.href;
+
+// Question13
+// A user-defined variable created
+let my_var = "userVariable";
+let my_value = "userValue";
+
+let x = {
+    // Assign value of a user-defined variable
+    [my_var]: my_value,
+};
+console.log(x);
+console.log(x[my_var]);
