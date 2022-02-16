@@ -215,11 +215,23 @@
 // console.log(diff(10));
 
 // Question16
-function triple(num1, num2) {
-    if (num1 == num2) // if given number are equal 
-        return (num1 + num2) * 3; // If the two values are same, then returns triple their sum.
-    else
-        return (num1 + num2); // error
+// function triple(num1, num2) {
+//     if (num1 == num2) // if given number are equal 
+//         return (num1 + num2) * 3; // If the two values are same, then returns triple their sum.
+//     else
+//         return (num1 + num2); // error
+// }
+// console.log(triple(10, 20));
+// console.log(triple(20, 20));
+
+// Question17
+function diff_num(n) {
+    if (n <= 19) {
+        return (19 - n);
+    } else {
+        return (n - 19) * 3;
+    }
 }
-console.log(triple(10, 20));
-console.log(triple(20, 20));
+console.log(diff_num(12));
+console.log(diff_num(19));
+console.log(diff_num(22));
