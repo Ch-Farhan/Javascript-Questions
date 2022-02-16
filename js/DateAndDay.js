@@ -204,12 +204,22 @@
 // };
 
 // Question15
-function diff(num) {
-    if (num <= 13) // if given number is less than or eual to 13 
-        return 13 - num; // then calculate the difference b/w the given number and 13
-    else
-        return (num - 13) * 2; // else if the num is greater than 13 then return double the absolute difference
-}
+// function diff(num) {
+//     if (num <= 13) // if given number is less than or eual to 13 
+//         return 13 - num; // then calculate the difference b/w the given number and 13
+//     else
+//         return (num - 13) * 2; // else if the num is greater than 13 then return double the absolute difference
+// }
 
-console.log(diff(23));
-console.log(diff(10));
+// console.log(diff(23));
+// console.log(diff(10));
+
+// Question16
+function triple(num1, num2) {
+    if (num1 == num2) // if given number are equal 
+        return (num1 + num2) * 3; // If the two values are same, then returns triple their sum.
+    else
+        return (num1 + num2); // error
+}
+console.log(triple(10, 20));
+console.log(triple(20, 20));
