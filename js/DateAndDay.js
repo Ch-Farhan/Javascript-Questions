@@ -288,13 +288,23 @@
 // }
 
 // Question23
-function first_last(str1) {
-    if (str1.length <= 1) {
-        return str1;
-    }
-    mid_char = str1.substring(1, str1.length - 1);
-    return (str1.charAt(str1.length - 1)) + mid_char + str1.charAt(0);
+// function first_last(str1) {
+//     if (str1.length <= 1) {
+//         return str1;
+//     }
+//     mid_char = str1.substring(1, str1.length - 1);
+//     return (str1.charAt(str1.length - 1)) + mid_char + str1.charAt(0);
+// }
+// console.log(first_last('a'));
+// console.log(first_last('ab'));
+// console.log(first_last('abc'));
+
+// Question24
+function newString(n) {
+    var text = n.substring(n.length - 3, n.length)
+    console.log(text)
+
+    var new_string = text + n + text
+    console.log(new_string)
 }
-console.log(first_last('a'));
-console.log(first_last('ab'));
-console.log(first_last('abc'));
+newString("jayant")
