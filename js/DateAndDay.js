@@ -387,13 +387,25 @@
 // console.log("The largest number is " + largest);
 
 // Question32
-function nearest(a, b) {
-    var a1 = 100 - a
-    var b1 = 100 - b
-    if (a1 > b1) {
-        return b + " is nearest"
+// function nearest(a, b) {
+//     var a1 = 100 - a
+//     var b1 = 100 - b
+//     if (a1 > b1) {
+//         return b + " is nearest"
+//     } else {
+//         return a + " is nearest"
+//     }
+// }
+// console.log(nearest(10, 9))
+
+// Question33
+function numbers_ranges(num1, num2) {
+    if ((num1 >= 40 && num1 <= 60 && num2 > 40 && num2 < 60) || (num1 >= 70 && num1 <= 100 && num2 > 70 && num2 < 100)) {
+        return true;
     } else {
-        return a + " is nearest"
+        return false;
     }
 }
-console.log(nearest(10, 9))
+console.log(numbers_ranges(44, 56));
+console.log(numbers_ranges(70, 95));
+console.log(numbers_ranges(50, 89));
