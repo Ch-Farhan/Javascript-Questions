@@ -270,11 +270,19 @@
 // console.log(positive_negative(-2, -2));
 
 // Question21
-function string_check(str1) {
-    if (str1 === null || str1 === undefined || str1.substring(0, 2) === 'Py') {
-        return str1;
-    }
-    return "Py" + str1;
+// function string_check(str1) {
+//     if (str1 === null || str1 === undefined || str1.substring(0, 2) === 'Py') {
+//         return str1;
+//     }
+//     return "Py" + str1;
+// }
+// console.log(string_check("Python"));
+// console.log(string_check("thon"));
+
+// Question22
+function removeCharacter() {
+    originalString = 'qNARinternational';
+    newString = originalString.replace('q', '');
+
+    document.querySelector('.output').textContent = newString;
 }
-console.log(string_check("Python"));
-console.log(string_check("thon"));
