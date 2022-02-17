@@ -399,13 +399,33 @@
 // console.log(nearest(10, 9))
 
 // Question33
-function numbers_ranges(num1, num2) {
-    if ((num1 >= 40 && num1 <= 60 && num2 > 40 && num2 < 60) || (num1 >= 70 && num1 <= 100 && num2 > 70 && num2 < 100)) {
-        return true;
+// function numbers_ranges(num1, num2) {
+//     if ((num1 >= 40 && num1 <= 60 && num2 > 40 && num2 < 60) || (num1 >= 70 && num1 <= 100 && num2 > 70 && num2 < 100)) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(numbers_ranges(44, 56));
+// console.log(numbers_ranges(70, 95));
+// console.log(numbers_ranges(50, 89));
+
+// Question34
+
+function max_townums_range(num1, num2) {
+    if ((num1 >= 40 && num1 <= 60) && (num2 >= 40 && num2 <= 60)) {
+        if (num1 === num2) {
+            return "Numbers are the same";
+        } else if (num1 > num2) {
+            return num1;
+        } else {
+            return num2;
+        }
     } else {
-        return false;
+        return "Numbers don't fit in range";
     }
 }
-console.log(numbers_ranges(44, 56));
-console.log(numbers_ranges(70, 95));
-console.log(numbers_ranges(50, 89));
+// display the result
+console.log(max_townums_range(45, 60));
+console.log(max_townums_range(25, 60));
+console.log(max_townums_range(45, 80));
