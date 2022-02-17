@@ -411,21 +411,44 @@
 // console.log(numbers_ranges(50, 89));
 
 // Question34
+// function max_townums_range(num1, num2) {
+//     if ((num1 >= 40 && num1 <= 60) && (num2 >= 40 && num2 <= 60)) {
+//         if (num1 === num2) {
+//             return "Numbers are the same";
+//         } else if (num1 > num2) {
+//             return num1;
+//         } else {
+//             return num2;
+//         }
+//     } else {
+//         return "Numbers don't fit in range";
+//     }
+// }
+// // display the result
+// console.log(max_townums_range(45, 60));
+// console.log(max_townums_range(25, 60));
+// console.log(max_townums_range(45, 80));
 
-function max_townums_range(num1, num2) {
-    if ((num1 >= 40 && num1 <= 60) && (num2 >= 40 && num2 <= 60)) {
-        if (num1 === num2) {
-            return "Numbers are the same";
-        } else if (num1 > num2) {
-            return num1;
-        } else {
-            return num2;
+// Question34
+function check_char(str1, char) {
+    ctr = 0;
+    for (let i = 0; i < str1.length; i++) {
+        if ((str1.charAt(i) == char) && (i >= 1 && i <= 3)) {
+            ctr = 1;
+            break;
         }
-    } else {
-        return "Numbers don't fit in range";
     }
+    if (ctr == 1) return true;
+    return false;
 }
-// display the result
-console.log(max_townums_range(45, 60));
-console.log(max_townums_range(25, 60));
-console.log(max_townums_range(45, 80));
+console.log(check_char("Python", "y"));
+console.log(check_char("JavaScript", "a"));
+console.log(check_char("Console", "o"));
+console.log(check_char("Console", "C"));
+console.log(check_char("Console", "e"));
+console.log(check_char("JavaScript", "S"));
+
+// var string = "foo",
+//     var substring = "oo";
+
+// console.log(string.includes(substring));
