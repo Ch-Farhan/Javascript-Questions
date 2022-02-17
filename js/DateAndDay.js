@@ -299,7 +299,17 @@
 // console.log(first_last('ab'));
 // console.log(first_last('abc'));
 
-// Question24
+// Question25
+// function newString(n) {
+//     var text = n.substring(n.length - 3, n.length)
+//     console.log(text)
+
+//     var new_string = text + n + text
+//     console.log(new_string)
+// }
+// newString("jayant")
+
+// Question26
 function newString(n) {
     var text = n.substring(n.length - 3, n.length)
     console.log(text)
