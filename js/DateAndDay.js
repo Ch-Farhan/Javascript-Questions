@@ -310,11 +310,31 @@
 // newString("jayant")
 
 // Question26
-function newString(n) {
-    var text = n.substring(n.length - 3, n.length)
-    console.log(text)
+// function newString(n) {
+//     var text = n.substring(n.length - 3, n.length)
+//     console.log(text)
 
-    var new_string = text + n + text
-    console.log(new_string)
+//     var new_string = text + n + text
+//     console.log(new_string)
+// }
+// newString("jayant")
+
+// Question27
+// let text = "Hello world, welcome to the universe.";
+// let result = text.startsWith("Hello");
+
+// document.getElementById("demo").innerHTML = result;
+
+// Question28
+function positive_negative(num1) {
+    if (num1 > 50 && num1 < 99) {
+        return true;
+    } else {
+        return false;
+    }
 }
-newString("jayant")
+console.log(positive_negative(9));
+console.log(positive_negative(51));
+console.log(positive_negative(98));
+console.log(positive_negative(99));
+console.log(positive_negative(101));
