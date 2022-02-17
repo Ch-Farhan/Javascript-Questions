@@ -340,14 +340,28 @@
 // console.log(positive_negative(101));
 
 // Question29
-function three(num1, num2, num3) {
-    if (num1 > 50 && num1 < 99 || num2 > 50 && num2 < 99 || num3 > 50 && num3 < 99) {
-        return true;
-    } else {
-        return false;
+// function three(num1, num2, num3) {
+//     if (num1 > 50 && num1 < 99 || num2 > 50 && num2 < 99 || num3 > 50 && num3 < 99) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(three(50, 90, 99));
+// console.log(three(5, 9, 199));
+// console.log(three(65, 89, 199));
+// console.log(three(65, 9, 199));
+
+// Question30
+function check_script(str) {
+    if (str.length < 6) {
+        return str;
     }
+    let result_str = str;
+    if (str.substring(10, 4) == 'Script') {
+        result_str = str.substring(0, 4) + str.substring(10, str.length);
+    }
+    return result_str;
 }
-console.log(three(50, 90, 99));
-console.log(three(5, 9, 199));
-console.log(three(65, 89, 199));
-console.log(three(65, 9, 199));
+console.log(check_script("JavaScript"));
+console.log(check_script("CoffeeScript"));
