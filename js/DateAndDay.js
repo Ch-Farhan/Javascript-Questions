@@ -326,15 +326,28 @@
 // document.getElementById("demo").innerHTML = result;
 
 // Question28
-function positive_negative(num1) {
-    if (num1 > 50 && num1 < 99) {
+// function positive_negative(num1) {
+//     if (num1 > 50 && num1 < 99) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(positive_negative(9));
+// console.log(positive_negative(51));
+// console.log(positive_negative(98));
+// console.log(positive_negative(99));
+// console.log(positive_negative(101));
+
+// Question29
+function three(num1, num2, num3) {
+    if (num1 > 50 && num1 < 99 || num2 > 50 && num2 < 99 || num3 > 50 && num3 < 99) {
         return true;
     } else {
         return false;
     }
 }
-console.log(positive_negative(9));
-console.log(positive_negative(51));
-console.log(positive_negative(98));
-console.log(positive_negative(99));
-console.log(positive_negative(101));
+console.log(three(50, 90, 99));
+console.log(three(5, 9, 199));
+console.log(three(65, 89, 199));
+console.log(three(65, 9, 199));
