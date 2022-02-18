@@ -504,18 +504,34 @@ numbers is same */
 // console.log(sortaSum(90, 80));
 
 // Question40
-function check8(x, y) {
-    if (x == 8 || y == 8) {
-        return true;
+// function check8(x, y) {
+//     if (x == 8 || y == 8) {
+//         return true;
+//     }
+
+//     if (x + y == 8 || Math.abs(x - y) == 8) {
+//         return true;
+//     }
+
+//     return false;
+// }
+// console.log(check8(7, 8));
+// console.log(check8(16, 8));
+// console.log(check8(24, 32));
+// console.log(check8(17, 18));
+
+// Question41
+function three_numbers(x, y, z) {
+    if (x == y && y == z) {
+        return 30;
     }
 
-    if (x + y == 8 || Math.abs(x - y) == 8) {
-        return true;
+    if (x == y || y == z || z == x) {
+        return 40;
     }
 
-    return false;
+    return 20;
 }
-console.log(check8(7, 8));
-console.log(check8(16, 8));
-console.log(check8(24, 32));
-console.log(check8(17, 18));
+console.log(three_numbers(8, 8, 8));
+console.log(three_numbers(8, 8, 18));
+console.log(three_numbers(8, 7, 18));
