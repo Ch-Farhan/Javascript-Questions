@@ -782,10 +782,22 @@ numbers is same */
 // console.log(middle_three('Exercises'));
 
 // Question64
-function str_con_cat(str1, str2) {
-    const m = Math.min(str1.length, str2.length);
+// function str_con_cat(str1, str2) {
+//     const m = Math.min(str1.length, str2.length);
 
-    return str1.substring(str1.length - m) + str2.substring(str2.length - m);
+//     return str1.substring(str1.length - m) + str2.substring(str2.length - m);
+// }
+// console.log(str_con_cat("Python", "JS"));
+// console.log(str_con_cat("ab", "cdef"));
+
+// Question65
+function end_script(str) {
+    if (str.substring(str.length - 6, str.length) == 'Script') {
+        return true;
+    } else {
+        return false;
+    }
 }
-console.log(str_con_cat("Python", "JS"));
-console.log(str_con_cat("ab", "cdef"));
+console.log(end_script("JavaScript"));
+console.log(end_script("Java Script"));
+console.log(end_script("Java Scripts"));
