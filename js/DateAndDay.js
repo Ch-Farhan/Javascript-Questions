@@ -492,13 +492,30 @@ numbers is same */
 // console.log(exam_status("99", "true "));
 
 // Question39
-function sortaSum(x, y) {
-    const sum_nums = x + y;
-    if (sum_nums >= 50 && sum_nums <= 80) {
-        return 65;
-    }
-    return 80;
-}
+// function sortaSum(x, y) {
+//     const sum_nums = x + y;
+//     if (sum_nums >= 50 && sum_nums <= 80) {
+//         return 65;
+//     }
+//     return 80;
+// }
 
-console.log(sortaSum(30, 20));
-console.log(sortaSum(90, 80));
+// console.log(sortaSum(30, 20));
+// console.log(sortaSum(90, 80));
+
+// Question40
+function check8(x, y) {
+    if (x == 8 || y == 8) {
+        return true;
+    }
+
+    if (x + y == 8 || Math.abs(x - y) == 8) {
+        return true;
+    }
+
+    return false;
+}
+console.log(check8(7, 8));
+console.log(check8(16, 8));
+console.log(check8(24, 32));
+console.log(check8(17, 18));
