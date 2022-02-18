@@ -594,12 +594,28 @@ numbers is same */
 // console.log(valCheck(16, 20));
 
 // Question47
-function fun() {
-    const input = prompt('Please enter a number:');
-    if (input >= 40 && input <= 1000)
-        document.getElementById("gfg2")
-        .innerHTML = input + " Success!";
-    else
-        document.getElementById("gfg2")
-        .innerHTML = input + " Fail!"
+// function fun() {
+//     const input = prompt('Please enter a number:');
+//     if (input >= 40 && input <= 1000)
+//         document.getElementById("gfg2")
+//         .innerHTML = input + " Success!";
+//     else
+//         document.getElementById("gfg2")
+//         .innerHTML = input + " Fail!"
+// }
+
+// Question48
+// program to reverse a string
+function reverseString(str) {
+    // empty string
+    let newString = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
 }
+// take input from the user
+const string = prompt('Enter a string: ');
+
+const result = reverseString(string);
+console.log(result);
