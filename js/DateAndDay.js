@@ -668,13 +668,24 @@ numbers is same */
 // Question54
 // program to count the number of vowels in a string
 
-function countVowel(str) {
-    // find the count of vowels
-    const count = str.match(/[aeiou]/gi).length;
-    // return number of vowels
-    return count;
+// function countVowel(str) {
+//     // find the count of vowels
+//     const count = str.match(/[aeiou]/gi).length;
+//     // return number of vowels
+//     return count;
+// }
+// // take input
+// const string = prompt('Enter a string: ');
+// const result = countVowel(string);
+// console.log(result);
+
+// Question55
+function equal_pt(str) {
+    var str_p = str.replace(/[^p]/g, "");
+    var str_t = str.replace(/[^t]/g, "");
+    var p_num = str_p.length;
+    var s_num = str_t.length;
+    return p_num === s_num;
 }
-// take input
-const string = prompt('Enter a string: ');
-const result = countVowel(string);
-console.log(result);
+console.log(equal_pt("paatpss"));
+console.log(equal_pt("paatps"));
