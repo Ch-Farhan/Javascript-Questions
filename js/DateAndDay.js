@@ -639,11 +639,20 @@ numbers is same */
 // console.log(str2);
 
 // Question51
-function time_convert(num) {
-    var hours = Math.floor(num / 60);
-    var minutes = num % 60;
-    return hours + ":" + minutes;
+// function time_convert(num) {
+//     var hours = Math.floor(num / 60);
+//     var minutes = num % 60;
+//     return hours + ":" + minutes;
+// }
+// console.log(time_convert(71));
+// console.log(time_convert(450));
+// console.log(time_convert(1441));
+
+// Question52
+function alpha(str) {
+    var arr = str.split(""); // splits the string
+    res = arr.sort().join(""); // sort the array and joins to form a string
+    return res; // returns the result
 }
-console.log(time_convert(71));
-console.log(time_convert(450));
-console.log(time_convert(1441));
+console.log("Converting Letters in alphabetical order");
+console.log(alpha("qNarInternational"));
