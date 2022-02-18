@@ -649,10 +649,18 @@ numbers is same */
 // console.log(time_convert(1441));
 
 // Question52
-function alpha(str) {
-    var arr = str.split(""); // splits the string
-    res = arr.sort().join(""); // sort the array and joins to form a string
-    return res; // returns the result
+// function alpha(str) {
+//     var arr = str.split(""); // splits the string
+//     res = arr.sort().join(""); // sort the array and joins to form a string
+//     return res; // returns the result
+// }
+// console.log("Converting Letters in alphabetical order");
+// console.log(alpha("qNarInternational"));
+
+// Question53
+function ab_Check(str) {
+    return (/a...b/).test(str) || (/b...a/).test(str);
 }
-console.log("Converting Letters in alphabetical order");
-console.log(alpha("qNarInternational"));
+console.log(ab_Check("Chainsbreak"));
+console.log(ab_Check("pane borrowed"));
+console.log(ab_Check("abCheck"));
