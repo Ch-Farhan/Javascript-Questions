@@ -791,13 +791,36 @@ numbers is same */
 // console.log(str_con_cat("ab", "cdef"));
 
 // Question65
-function end_script(str) {
-    if (str.substring(str.length - 6, str.length) == 'Script') {
-        return true;
-    } else {
-        return false;
+// function end_script(str) {
+//     if (str.substring(str.length - 6, str.length) == 'Script') {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+// console.log(end_script("JavaScript"));
+// console.log(end_script("Java Script"));
+// console.log(end_script("Java Scripts"));
+
+
+// function string_check(str1) {
+//     if (str1 === null || str1 === undefined || str1.substring(0, 2) === 'Py') {
+//         return str1;
+//     }
+//     return "P" + str1;
+// }
+
+// console.log(string_check("Python"));
+// console.log(string_check("thon"));
+
+// Question66
+function city_name(str) {
+    if (str.length >= 3 && ((str.substring(0, 3) == 'Los') ||
+            (str.substring(0, 3) == 'New'))) {
+        return str;
     }
+    return '';
 }
-console.log(end_script("JavaScript"));
-console.log(end_script("Java Script"));
-console.log(end_script("Java Scripts"));
+console.log(city_name("New York"));
+console.log(city_name("Los Angeles"));
+console.log(city_name("London"));
