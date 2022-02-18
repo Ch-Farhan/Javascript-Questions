@@ -583,12 +583,23 @@ numbers is same */
 // console.log(test_number(9, 25));
 
 // Question46
-function valCheck(a, b) {
-    if (!((a % 7 == 0 || a % 11 == 0) && (b % 7 == 0 || b % 11 == 0))) {
-        return ((a % 7 == 0 || a % 11 == 0) || (b % 7 == 0 || b % 11 == 0));
-    } else
-        return false;
+// function valCheck(a, b) {
+//     if (!((a % 7 == 0 || a % 11 == 0) && (b % 7 == 0 || b % 11 == 0))) {
+//         return ((a % 7 == 0 || a % 11 == 0) || (b % 7 == 0 || b % 11 == 0));
+//     } else
+//         return false;
+// }
+// console.log(valCheck(14, 21));
+// console.log(valCheck(14, 20));
+// console.log(valCheck(16, 20));
+
+// Question47
+function fun() {
+    const input = prompt('Please enter a number:');
+    if (input >= 40 && input <= 1000)
+        document.getElementById("gfg2")
+        .innerHTML = input + " Success!";
+    else
+        document.getElementById("gfg2")
+        .innerHTML = input + " Fail!"
 }
-console.log(valCheck(14, 21));
-console.log(valCheck(14, 20));
-console.log(valCheck(16, 20));
