@@ -429,26 +429,42 @@
 // console.log(max_townums_range(25, 60));
 // console.log(max_townums_range(45, 80));
 
-// Question34
-function check_char(str1, char) {
-    ctr = 0;
-    for (let i = 0; i < str1.length; i++) {
-        if ((str1.charAt(i) == char) && (i >= 1 && i <= 3)) {
-            ctr = 1;
-            break;
-        }
-    }
-    if (ctr == 1) return true;
-    return false;
+// Question35
+// function check_char(str1, char) {
+//     ctr = 0;
+//     for (let i = 0; i < str1.length; i++) {
+//         if ((str1.charAt(i) == char) && (i >= 1 && i <= 3)) {
+//             ctr = 1;
+//             break;
+//         }
+//     }
+//     if (ctr == 1) return true;
+//     return false;
+// }
+// console.log(check_char("Python", "y"));
+// console.log(check_char("JavaScript", "a"));
+// console.log(check_char("Console", "o"));
+// console.log(check_char("Console", "C"));
+// console.log(check_char("Console", "e"));
+// console.log(check_char("JavaScript", "S"));
+
+// Question36
+/* program to check whether the last digit of three
+numbers is same */
+
+// take input
+const a = prompt('Enter a first integer: ');
+const b = prompt('Enter a second integer: ');
+const c = prompt('Enter a third integer: ');
+
+// find the last digit
+const result1 = a % 10;
+const result2 = b % 10;
+const result3 = c % 10;
+
+// compare the last digits
+if (result1 == result2 && result1 == result3) {
+    console.log(`${a}, ${b} and ${c} have the same last digit.`);
+} else {
+    console.log(`${a}, ${b} and ${c} have different last digit.`);
 }
-console.log(check_char("Python", "y"));
-console.log(check_char("JavaScript", "a"));
-console.log(check_char("Console", "o"));
-console.log(check_char("Console", "C"));
-console.log(check_char("Console", "e"));
-console.log(check_char("JavaScript", "S"));
-
-// var string = "foo",
-//     var substring = "oo";
-
-// console.log(string.includes(substring));
