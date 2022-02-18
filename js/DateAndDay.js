@@ -561,11 +561,23 @@ numbers is same */
 // console.log(same_last_digit(20, 22, 45));
 
 // Question44
-function lessby20_others(x, y, z) {
-    return (x >= 20 && (x < y || x < z)) ||
-        (y >= 20 && (y < x || y < z)) ||
-        (z >= 20 && (z < y || z < x));
+// function lessby20_others(x, y, z) {
+//     return (x >= 20 && (x < y || x < z)) ||
+//         (y >= 20 && (y < x || y < z)) ||
+//         (z >= 20 && (z < y || z < x));
+// }
+// console.log(lessby20_others(23, 45, 10));
+// console.log(lessby20_others(23, 23, 10));
+// console.log(lessby20_others(21, 66, 75));
+
+// Question45
+function test_number(x, y) {
+    return (x === 15 || y === 15 || x + y === 15 || Math.abs(x - y) === 15);
 }
-console.log(lessby20_others(23, 45, 10));
-console.log(lessby20_others(23, 23, 10));
-console.log(lessby20_others(21, 66, 75));
+console.log(test_number(15, 9));
+console.log(test_number(25, 15));
+console.log(test_number(7, 8));
+console.log(test_number(25, 10));
+console.log(test_number(5, 9));
+console.log(test_number(7, 9));
+console.log(test_number(9, 25));
