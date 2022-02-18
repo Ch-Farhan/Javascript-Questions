@@ -704,12 +704,24 @@ numbers is same */
 // console.log(result_array);
 
 // Question57
-function string_copies(str, n) {
-    if (n < 0)
+// function string_copies(str, n) {
+//     if (n < 0)
+//         return false;
+//     else
+//         return str.repeat(n);
+// }
+// console.log(string_copies("abc", 5));
+// console.log(string_copies("abc", 0));
+// console.log(string_copies("abc", -2));
+
+// Question58
+function newstring(str) {
+    if (str.length >= 3) {
+        result_str = str.substring(str.length - 3);
+        return result_str + result_str + result_str + result_str;
+    } else
         return false;
-    else
-        return str.repeat(n);
 }
-console.log(string_copies("abc", 5));
-console.log(string_copies("abc", 0));
-console.log(string_copies("abc", -2));
+console.log(newstring("Python 3.0"));
+console.log(newstring("JS"));
+console.log(newstring("JavaScript"));
