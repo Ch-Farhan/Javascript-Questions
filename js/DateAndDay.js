@@ -727,12 +727,20 @@ numbers is same */
 // console.log(newstring("JavaScript"));
 
 // Question59
-function first_half(str) {
-    if (str.length % 2 == 0) {
-        return str.slice(0, str.length / 2);
-    }
-    return str;
+// function first_half(str) {
+//     if (str.length % 2 == 0) {
+//         return str.slice(0, str.length / 2);
+//     }
+//     return str;
+// }
+// console.log(first_half("Python"));
+// console.log(first_half("JavaScript"));
+// console.log(first_half("PHP"));
+
+// Question59
+function without_first_end(str) {
+    return str.substring(1, str.length - 1);
 }
-console.log(first_half("Python"));
-console.log(first_half("JavaScript"));
-console.log(first_half("PHP"));
+console.log(without_first_end('JavaScript'));
+console.log(without_first_end('JS'));
+console.log(without_first_end('PHP'));
