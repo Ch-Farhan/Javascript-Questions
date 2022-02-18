@@ -621,10 +621,19 @@ numbers is same */
 // console.log(result);
 
 // Question49
-function strReplace() {
-    var myStr = 'Farhan';
-    var newStr = myStr.replace(/_/g, "-");
+// function strReplace() {
+//     var myStr = 'Farhan';
+//     var newStr = myStr.replace(/_/g, "-");
 
-    // Insert modified string in paragraph
-    document.getElementById("myText").innerHTML = newStr;
+//     // Insert modified string in paragraph
+//     document.getElementById("myText").innerHTML = newStr;
+// }
+
+// Question50
+const str = 'qnar! i have learned something new today';
+const arr = str.split(" ");
+for (var i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
 }
+const str2 = arr.join(" ");
+console.log(str2);
