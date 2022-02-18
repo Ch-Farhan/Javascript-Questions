@@ -521,17 +521,30 @@ numbers is same */
 // console.log(check8(17, 18));
 
 // Question41
-function three_numbers(x, y, z) {
-    if (x == y && y == z) {
-        return 30;
-    }
+// function three_numbers(x, y, z) {
+//     if (x == y && y == z) {
+//         return 30;
+//     }
 
-    if (x == y || y == z || z == x) {
-        return 40;
-    }
+//     if (x == y || y == z || z == x) {
+//         return 40;
+//     }
 
-    return 20;
+//     return 20;
+// }
+// console.log(three_numbers(8, 8, 8));
+// console.log(three_numbers(8, 8, 18));
+// console.log(three_numbers(8, 7, 18));
+
+// Question42
+function number_order(x, y, z) {
+    if (y > x && z > y) {
+        return "strict mode";
+    } else if (z > y)
+        return "Soft mode";
+    else
+        return "Undefinded";
 }
-console.log(three_numbers(8, 8, 8));
-console.log(three_numbers(8, 8, 18));
-console.log(three_numbers(8, 7, 18));
+console.log(number_order(10, 15, 31));
+console.log(number_order(24, 22, 31));
+console.log(number_order(50, 21, 15));
