@@ -746,11 +746,22 @@ numbers is same */
 // console.log(without_first_end('PHP'));
 
 // Question61
-function concatenate(str1, str2) {
-    str1 = str1.substring(1, str1.length);
-    str2 = str2.substring(1, str2.length);
-    return str1 + str2;
+// function concatenate(str1, str2) {
+//     str1 = str1.substring(1, str1.length);
+//     str2 = str2.substring(1, str2.length);
+//     return str1 + str2;
+// }
+// console.log(concatenate("PHP", "JS"));
+// console.log(concatenate("A", "B"));
+// console.log(concatenate("AA", "BB"));
+
+// Question62
+function right_three(str) {
+    if (str.length > 1) {
+        return str.slice(-3) + str.slice(0, -3);
+    }
+    return str;
 }
-console.log(concatenate("PHP", "JS"));
-console.log(concatenate("A", "B"));
-console.log(concatenate("AA", "BB"));
+console.log(right_three("Python"));
+console.log(right_three("JavaScript"));
+console.log(right_three("Hi"));
