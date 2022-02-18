@@ -606,16 +606,25 @@ numbers is same */
 
 // Question48
 // program to reverse a string
-function reverseString(str) {
-    // empty string
-    let newString = "";
-    for (let i = str.length - 1; i >= 0; i--) {
-        newString += str[i];
-    }
-    return newString;
-}
-// take input from the user
-const string = prompt('Enter a string: ');
+// function reverseString(str) {
+//     // empty string
+//     let newString = "";
+//     for (let i = str.length - 1; i >= 0; i--) {
+//         newString += str[i];
+//     }
+//     return newString;
+// }
+// // take input from the user
+// const string = prompt('Enter a string: ');
 
-const result = reverseString(string);
-console.log(result);
+// const result = reverseString(string);
+// console.log(result);
+
+// Question49
+function strReplace() {
+    var myStr = 'Farhan';
+    var newStr = myStr.replace(/_/g, "-");
+
+    // Insert modified string in paragraph
+    document.getElementById("myText").innerHTML = newStr;
+}
