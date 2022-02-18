@@ -481,12 +481,24 @@ numbers is same */
 // console.log(newstring("jayant"));
 
 // Question38
-function exam_status(totmarks, is_exam) {
-    if (is_exam) {
-        return totmarks >= 90;
+// function exam_status(totmarks, is_exam) {
+//     if (is_exam) {
+//         return totmarks >= 90;
+//     }
+//     return (totmarks >= 89 && totmarks <= 100);
+// }
+// console.log(exam_status("78", " "));
+// console.log(exam_status("89", "true "));
+// console.log(exam_status("99", "true "));
+
+// Question39
+function sortaSum(x, y) {
+    const sum_nums = x + y;
+    if (sum_nums >= 50 && sum_nums <= 80) {
+        return 65;
     }
-    return (totmarks >= 89 && totmarks <= 100);
+    return 80;
 }
-console.log(exam_status("78", " "));
-console.log(exam_status("89", "true "));
-console.log(exam_status("99", "true "));
+
+console.log(sortaSum(30, 20));
+console.log(sortaSum(90, 80));
