@@ -630,10 +630,20 @@ numbers is same */
 // }
 
 // Question50
-const str = 'qnar! i have learned something new today';
-const arr = str.split(" ");
-for (var i = 0; i < arr.length; i++) {
-    arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+// const str = 'qnar! i have learned something new today';
+// const arr = str.split(" ");
+// for (var i = 0; i < arr.length; i++) {
+//     arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+// }
+// const str2 = arr.join(" ");
+// console.log(str2);
+
+// Question51
+function time_convert(num) {
+    var hours = Math.floor(num / 60);
+    var minutes = num % 60;
+    return hours + ":" + minutes;
 }
-const str2 = arr.join(" ");
-console.log(str2);
+console.log(time_convert(71));
+console.log(time_convert(450));
+console.log(time_convert(1441));
