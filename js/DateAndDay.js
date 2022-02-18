@@ -658,9 +658,23 @@ numbers is same */
 // console.log(alpha("qNarInternational"));
 
 // Question53
-function ab_Check(str) {
-    return (/a...b/).test(str) || (/b...a/).test(str);
+// function ab_Check(str) {
+//     return (/a...b/).test(str) || (/b...a/).test(str);
+// }
+// console.log(ab_Check("Chainsbreak"));
+// console.log(ab_Check("pane borrowed"));
+// console.log(ab_Check("abCheck"));
+
+// Question54
+// program to count the number of vowels in a string
+
+function countVowel(str) {
+    // find the count of vowels
+    const count = str.match(/[aeiou]/gi).length;
+    // return number of vowels
+    return count;
 }
-console.log(ab_Check("Chainsbreak"));
-console.log(ab_Check("pane borrowed"));
-console.log(ab_Check("abCheck"));
+// take input
+const string = prompt('Enter a string: ');
+const result = countVowel(string);
+console.log(result);
