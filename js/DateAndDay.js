@@ -470,12 +470,23 @@ numbers is same */
 // }
 
 // Question37
-function newstring(n) {
-    console.log(n)
-    if (n.length > 3) {
-        return n.substring(0, 3).toUpperCase() + n.substring(3, n.length)
-    } else {
-        return n.toUpperCase()
+// function newstring(n) {
+//     console.log(n)
+//     if (n.length > 3) {
+//         return n.substring(0, 3).toUpperCase() + n.substring(3, n.length)
+//     } else {
+//         return n.toUpperCase()
+//     }
+// }
+// console.log(newstring("jayant"));
+
+// Question38
+function exam_status(totmarks, is_exam) {
+    if (is_exam) {
+        return totmarks >= 90;
     }
+    return (totmarks >= 89 && totmarks <= 100);
 }
-console.log(newstring("jayant"))
+console.log(exam_status("78", " "));
+console.log(exam_status("89", "true "));
+console.log(exam_status("99", "true "));
