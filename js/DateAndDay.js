@@ -550,12 +550,22 @@ numbers is same */
 // console.log(number_order(50, 21, 15));
 
 // Question43
-function same_last_digit(p, q, r) {
-    return (p % 10 === q % 10) ||
-        (p % 10 === r % 10) ||
-        (q % 10 === r % 10);
+// function same_last_digit(p, q, r) {
+//     return (p % 10 === q % 10) ||
+//         (p % 10 === r % 10) ||
+//         (q % 10 === r % 10);
 
+// }
+// console.log(same_last_digit(22, 32, 42));
+// console.log(same_last_digit(102, 302, 2));
+// console.log(same_last_digit(20, 22, 45));
+
+// Question44
+function lessby20_others(x, y, z) {
+    return (x >= 20 && (x < y || x < z)) ||
+        (y >= 20 && (y < x || y < z)) ||
+        (z >= 20 && (z < y || z < x));
 }
-console.log(same_last_digit(22, 32, 42));
-console.log(same_last_digit(102, 302, 2));
-console.log(same_last_digit(20, 22, 45));
+console.log(lessby20_others(23, 45, 10));
+console.log(lessby20_others(23, 23, 10));
+console.log(lessby20_others(21, 66, 75));
