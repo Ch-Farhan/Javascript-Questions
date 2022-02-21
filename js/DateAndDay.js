@@ -873,10 +873,15 @@ numbers is same */
 
 
 // Q#5.
-var myArray = ["one", "two", "three"];
-var cloneArray = myArray.slice();
+// var myArray = ["one", "two", "three"];
+// var cloneArray = myArray.slice();
 
-myArray.splice(1, 1);
+// myArray.splice(1, 1);
 
-console.log(myArray);
-console.log(cloneArray);
+// console.log(myArray);
+// console.log(cloneArray);
+
+// Q#6.
+var arr = [1, 3, 5, 1, 2, 3, 7, 4, 5];
+var unique = arr.filter((x, i) => arr.indexOf(x) === i);
+console.log(unique);
