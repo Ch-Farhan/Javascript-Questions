@@ -1008,20 +1008,26 @@ numbers is same */
 // console.log(isEmpty); // 👉️ true
 
 // Q#5.
-function shallowEqual(object1, object2) {
-    const keys1 = Object.keys(object1);
-    const keys2 = Object.keys(object2);
-    if (keys1.length !== keys2.length) {
-        return false;
-    }
-    for (let key of keys1) {
-        if (object1[key] !== object2[key]) {
-            return false;
-        }
-    }
-    return true;
+// function shallowEqual(object1, object2) {
+//     const keys1 = Object.keys(object1);
+//     const keys2 = Object.keys(object2);
+//     if (keys1.length !== keys2.length) {
+//         return false;
+//     }
+//     for (let key of keys1) {
+//         if (object1[key] !== object2[key]) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// // console.log('arr', 'asd');
+// console.log(shallowEqual(10, 112));
+// console.log(shallowEqual('asd', 'abc'));
+// // document.log("avc", "Asd");
+
+// Q#6.
+function myFunction(a, b) {
+    return a * b;
 }
-// console.log('arr', 'asd');
-console.log(shallowEqual(10, 112));
-console.log(shallowEqual('asd', 'abc'));
-// document.log("avc", "Asd");
+document.getElementById("demo").innerHTML = myFunction(10, 2);
