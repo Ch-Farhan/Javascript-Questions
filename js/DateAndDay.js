@@ -882,6 +882,22 @@ numbers is same */
 // console.log(cloneArray);
 
 // Q#6.
-var arr = [1, 3, 5, 1, 2, 3, 7, 4, 5];
-var unique = arr.filter((x, i) => arr.indexOf(x) === i);
-console.log(unique);
+// var arr = [1, 3, 5, 1, 2, 3, 7, 4, 5];
+// var unique = arr.filter((x, i) => arr.indexOf(x) === i);
+// console.log(unique);
+
+// Q#7.
+var a = [1, 2, 3, 5];
+var b = [1, 2, 3, 5];
+
+// Comparing both arrays using stringify
+if (JSON.stringify(a) == JSON.stringify(b))
+    document.write("True");
+else
+    document.write("False");
+document.write('<br>');
+var f = [1, 2, 4, 5];
+if (JSON.stringify(a) == JSON.stringify(f))
+    document.write("True");
+else
+    document.write("False");
