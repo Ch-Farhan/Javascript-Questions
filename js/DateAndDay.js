@@ -861,13 +861,22 @@ numbers is same */
 // var filtered = array.filter(function(el) {
 //     return el != null;
 // });
-
 // console.log(filtered);
 
 // Q#4.
-const keyValuePair = [
-    ['a', '1'],
-    ['b', '2'],
-];
-Object.fromEntries(keyValuePair);
-console.log(keyValuePair);
+// const keyValuePair = [
+//     ['a', '1'],
+//     ['b', '2'],
+// ];
+// Object.fromEntries(keyValuePair);
+// console.log(keyValuePair);
+
+
+// Q#5.
+var myArray = ["one", "two", "three"];
+var cloneArray = myArray.slice();
+
+myArray.splice(1, 1);
+
+console.log(myArray);
+console.log(cloneArray);
