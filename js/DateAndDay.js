@@ -1003,6 +1003,25 @@ numbers is same */
 
 // Q#4.
 // Supported in IE 9-11
-const obj = {};
-const isEmpty = Object.keys(obj).length === 0;
-console.log(isEmpty); // 👉️ true
+// const obj = {};
+// const isEmpty = Object.keys(obj).length === 0;
+// console.log(isEmpty); // 👉️ true
+
+// Q#5.
+function shallowEqual(object1, object2) {
+    const keys1 = Object.keys(object1);
+    const keys2 = Object.keys(object2);
+    if (keys1.length !== keys2.length) {
+        return false;
+    }
+    for (let key of keys1) {
+        if (object1[key] !== object2[key]) {
+            return false;
+        }
+    }
+    return true;
+}
+// console.log('arr', 'asd');
+console.log(shallowEqual(10, 112));
+console.log(shallowEqual('asd', 'abc'));
+// document.log("avc", "Asd");
