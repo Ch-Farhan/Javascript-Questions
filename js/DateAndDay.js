@@ -940,23 +940,40 @@ numbers is same */
 // Function prints Intersection of arr1[] and arr2[]
 // m is the number of elements in arr1[]
 // n is the number of elements in arr2[]
-function printIntersection(arr1, arr2, m, n) {
-    var i = 0,
-        j = 0;
-    while (i < m && j < n) {
-        if (arr1[i] < arr2[j])
-            i++;
-        else if (arr2[j] < arr1[i])
-            j++;
-        else {
-            document.write(arr2[j++] + " ");
-            i++;
-        }
+
+// function printIntersection(arr1, arr2, m, n) {
+//     var i = 0,
+//         j = 0;
+//     while (i < m && j < n) {
+//         if (arr1[i] < arr2[j])
+//             i++;
+//         else if (arr2[j] < arr1[i])
+//             j++;
+//         else {
+//             document.write(arr2[j++] + " ");
+//             i++;
+//         }
+//     }
+// }
+// // Driver code
+// var arr1 = [1, 2, 4, 5, 6];
+// var arr2 = [2, 3, 5, 7];
+// var m = arr1.length;
+// var n = arr2.length;
+// printIntersection(arr1, arr2, m, n);
+
+
+// **********************************************************************************
+// Objects Started
+// Objects in javaScript
+
+// Q#1.
+let myObject = {
+        firstname: 'harry',
+        lastname: 'potter'
     }
+    //check the typeof if, boolean, object, string etc...
+console.log(typeof myObject);
+if (typeof myObject === 'object') {
+    console.log('this is object');
 }
-// Driver code
-var arr1 = [1, 2, 4, 5, 6];
-var arr2 = [2, 3, 5, 7];
-var m = arr1.length;
-var n = arr2.length;
-printIntersection(arr1, arr2, m, n);
