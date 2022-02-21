@@ -968,12 +968,24 @@ numbers is same */
 // Objects in javaScript
 
 // Q#1.
-let myObject = {
-        firstname: 'harry',
-        lastname: 'potter'
-    }
-    //check the typeof if, boolean, object, string etc...
-console.log(typeof myObject);
-if (typeof myObject === 'object') {
-    console.log('this is object');
-}
+// let myObject = {
+//         firstname: 'harry',
+//         lastname: 'potter'
+//     }
+//     //check the typeof if, boolean, object, string etc...
+// console.log(typeof myObject);
+// if (typeof myObject === 'object') {
+//     console.log('this is object');
+// }
+
+// Q#2.
+const arr = [
+    ['name', 'Farhan'],
+    ['age', 18],
+    ['breakfast', 'Apple']
+];
+const obj = Object.fromEntries(arr);
+console.log(obj);
+// ... and back:
+const arr2 = Object.entries(obj);
+console.log(arr2); // copy of the original array (omitting duplicate keys)
