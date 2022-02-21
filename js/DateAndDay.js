@@ -1032,8 +1032,25 @@ numbers is same */
 // }
 // document.getElementById("demo").innerHTML = myFunction(10, 2);
 
-// Q#6.
+// Q#7.
 // Supported in IE 9-11
-const obj = {};
-const isEmpty = Object.keys(obj).length === 0;
-console.log(isEmpty); // 👉️ true
+// const obj = {};
+// const isEmpty = Object.keys(obj).length === 0;
+// console.log(isEmpty); // 👉️ true
+
+// Q#8.
+var myString = "Item1";
+var jsObject = {
+    Item1: {
+        "apples": "red",
+        "oranges": "orange",
+    },
+    Item2: {
+        "bananas": "yellow",
+        "pears": "green"
+    }
+};
+var keys = Object.keys(jsObject); //get keys from object as an array
+keys.forEach(function(key) { //loop through keys array
+    console.log(key, key == myString)
+});
