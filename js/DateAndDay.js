@@ -919,17 +919,44 @@ numbers is same */
 // Q#9.
 // program to split array into smaller chunks
 
-function splitIntoChunk(arr, chunk) {
+// function splitIntoChunk(arr, chunk) {
 
-    for (i = 0; i < arr.length; i += chunk) {
+//     for (i = 0; i < arr.length; i += chunk) {
 
-        let tempArray;
-        tempArray = arr.slice(i, i + chunk);
-        console.log(tempArray);
+//         let tempArray;
+//         tempArray = arr.slice(i, i + chunk);
+//         console.log(tempArray);
+//     }
+
+// }
+
+// const array = [1, 2, 3, 4, 5, 6, 7, 8];
+// const chunk = 2;
+// splitIntoChunk(array, chunk);
+
+// Q#10.
+// JavaScript program to find intersection of
+// two sorted arrays
+// Function prints Intersection of arr1[] and arr2[]
+// m is the number of elements in arr1[]
+// n is the number of elements in arr2[]
+function printIntersection(arr1, arr2, m, n) {
+    var i = 0,
+        j = 0;
+    while (i < m && j < n) {
+        if (arr1[i] < arr2[j])
+            i++;
+        else if (arr2[j] < arr1[i])
+            j++;
+        else {
+            document.write(arr2[j++] + " ");
+            i++;
+        }
     }
-
 }
-
-const array = [1, 2, 3, 4, 5, 6, 7, 8];
-const chunk = 2;
-splitIntoChunk(array, chunk);
+// Driver code
+var arr1 = [1, 2, 4, 5, 6];
+var arr2 = [2, 3, 5, 7];
+var m = arr1.length;
+var n = arr2.length;
+printIntersection(arr1, arr2, m, n);
