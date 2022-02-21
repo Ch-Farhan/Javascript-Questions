@@ -991,12 +991,18 @@ numbers is same */
 // console.log(arr2); // copy of the original array (omitting duplicate keys)
 
 // Q#3.
-let user = {
-    name: "Farhan",
-    age: 30,
-    sayHi() {
-        // "this" is the "current object"
-        alert(this.name);
-    }
-};
-user.sayHi(); // John
+// let user = {
+//     name: "Farhan",
+//     age: 30,
+//     sayHi() {
+//         // "this" is the "current object"
+//         alert(this.name);
+//     }
+// };
+// user.sayHi(); // John
+
+// Q#4.
+// Supported in IE 9-11
+const obj = {};
+const isEmpty = Object.keys(obj).length === 0;
+console.log(isEmpty); // 👉️ true
