@@ -1039,18 +1039,46 @@ numbers is same */
 // console.log(isEmpty); // 👉️ true
 
 // Q#8.
-var myString = "Item1";
-var jsObject = {
-    Item1: {
-        "apples": "red",
-        "oranges": "orange",
-    },
-    Item2: {
-        "bananas": "yellow",
-        "pears": "green"
+// var myString = "Item1";
+// var jsObject = {
+//     Item1: {
+//         "apples": "red",
+//         "oranges": "orange",
+//     },
+//     Item2: {
+//         "bananas": "yellow",
+//         "pears": "green"
+//     }
+// };
+// var keys = Object.keys(jsObject); //get keys from object as an array
+// keys.forEach(function(key) { //loop through keys array
+//     console.log(key, key == myString)
+// });
+
+// Q#9.
+// JavaScript program to find intersection of
+// two sorted arrays
+// Function prints Intersection of arr1[] and arr2[]
+// m is the number of elements in arr1[]
+// n is the number of elements in arr2[]
+
+function printIntersection(arr1, arr2, m, n) {
+    var i = 0,
+        j = 0;
+    while (i < m && j < n) {
+        if (arr1[i] < arr2[j])
+            i++;
+        else if (arr2[j] < arr1[i])
+            j++;
+        else {
+            document.write(arr2[j++] + " ");
+            i++;
+        }
     }
-};
-var keys = Object.keys(jsObject); //get keys from object as an array
-keys.forEach(function(key) { //loop through keys array
-    console.log(key, key == myString)
-});
+}
+// Driver code
+var arr1 = [1, 2, 4, 5, 6];
+var arr2 = [2, 3, 5, 7];
+var m = arr1.length;
+var n = arr2.length;
+printIntersection(arr1, arr2, m, n);
