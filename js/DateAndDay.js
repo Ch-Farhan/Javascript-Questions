@@ -828,15 +828,28 @@ numbers is same */
 // **********************************************************************************
 // Array Started
 // Array in javaScript
-const array1 = [3, 'a'];
 
-// fill with 0 from position 2 until position 4
-console.log(array1.fill(0, 2, 4));
-// expected output: [1, 2, 0, 0]
+// Q#1.
+// const array1 = [3, 'a'];
 
-// fill with 5 from position 1
-console.log(array1.fill(5, 1));
-// expected output: [1, 5, 5, 5]
+// // fill with 0 from position 2 until position 4
+// console.log(array1.fill(0, 2, 4));
+// // expected output: [1, 2, 0, 0]
 
-console.log(array1.fill(6));
-// expected output: [6, 6, 6, 6]
+// // fill with 5 from position 1
+// console.log(array1.fill(5, 1));
+// // expected output: [1, 5, 5, 5]
+
+// console.log(array1.fill(6));
+// // expected output: [6, 6, 6, 6]
+
+
+// Q#2.
+let numbers = [1, 2, 3, 4, 5];
+let reversedNumbers = [];
+
+for (let i = numbers.length - 1; i >= 0; i--) {
+    reversedNumbers.push(numbers[i]);
+}
+
+console.log(reversedNumbers);
