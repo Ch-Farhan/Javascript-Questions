@@ -1027,7 +1027,13 @@ numbers is same */
 // // document.log("avc", "Asd");
 
 // Q#6.
-function myFunction(a, b) {
-    return a * b;
-}
-document.getElementById("demo").innerHTML = myFunction(10, 2);
+// function myFunction(a, b) {
+//     return a * b;
+// }
+// document.getElementById("demo").innerHTML = myFunction(10, 2);
+
+// Q#6.
+// Supported in IE 9-11
+const obj = {};
+const isEmpty = Object.keys(obj).length === 0;
+console.log(isEmpty); // 👉️ true
