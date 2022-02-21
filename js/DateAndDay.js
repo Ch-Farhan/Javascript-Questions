@@ -979,13 +979,24 @@ numbers is same */
 // }
 
 // Q#2.
-const arr = [
-    ['name', 'Farhan'],
-    ['age', 18],
-    ['breakfast', 'Apple']
-];
-const obj = Object.fromEntries(arr);
-console.log(obj);
-// ... and back:
-const arr2 = Object.entries(obj);
-console.log(arr2); // copy of the original array (omitting duplicate keys)
+// const arr = [
+//     ['name', 'Farhan'],
+//     ['age', 18],
+//     ['breakfast', 'Apple']
+// ];
+// const obj = Object.fromEntries(arr);
+// console.log(obj);
+// // ... and back:
+// const arr2 = Object.entries(obj);
+// console.log(arr2); // copy of the original array (omitting duplicate keys)
+
+// Q#3.
+let user = {
+    name: "Farhan",
+    age: 30,
+    sayHi() {
+        // "this" is the "current object"
+        alert(this.name);
+    }
+};
+user.sayHi(); // John
