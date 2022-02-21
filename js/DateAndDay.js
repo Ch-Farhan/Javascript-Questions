@@ -887,17 +887,31 @@ numbers is same */
 // console.log(unique);
 
 // Q#7.
-var a = [1, 2, 3, 5];
-var b = [1, 2, 3, 5];
+// var a = [1, 2, 3, 5];
+// var b = [1, 2, 3, 5];
 
-// Comparing both arrays using stringify
-if (JSON.stringify(a) == JSON.stringify(b))
-    document.write("True");
-else
-    document.write("False");
-document.write('<br>');
-var f = [1, 2, 4, 5];
-if (JSON.stringify(a) == JSON.stringify(f))
-    document.write("True");
-else
-    document.write("False");
+// // Comparing both arrays using stringify
+// if (JSON.stringify(a) == JSON.stringify(b))
+//     document.write("True");
+// else
+//     document.write("False");
+// document.write('<br>');
+// var f = [1, 2, 4, 5];
+// if (JSON.stringify(a) == JSON.stringify(f))
+//     document.write("True");
+// else
+//     document.write("False");
+
+// Q#8.
+var arrays = [
+    ["$6"],
+    ["$12"],
+    ["$25"],
+    ["$25"],
+    ["$18"],
+    ["$22"],
+    ["$10"]
+];
+var merged = [].concat.apply([], arrays);
+
+console.log(merged);
