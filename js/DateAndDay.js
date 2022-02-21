@@ -856,10 +856,18 @@ numbers is same */
 
 
 // Q#3.
-var array = [0, 1, null, 2, "", 3, undefined, 3, , , , , , 4, , 4, , 5, , 6, , , , ];
+// var array = [0, 1, null, 2, "", 3, undefined, 3, , , , , , 4, , 4, , 5, , 6, , , , ];
 
-var filtered = array.filter(function(el) {
-    return el != null;
-});
+// var filtered = array.filter(function(el) {
+//     return el != null;
+// });
 
-console.log(filtered);
+// console.log(filtered);
+
+// Q#4.
+const keyValuePair = [
+    ['a', '1'],
+    ['b', '2'],
+];
+Object.fromEntries(keyValuePair);
+console.log(keyValuePair);
