@@ -845,11 +845,21 @@ numbers is same */
 
 
 // Q#2.
-let numbers = [1, 2, 3, 4, 5];
-let reversedNumbers = [];
+// let numbers = [1, 2, 3, 4, 5];
+// let reversedNumbers = [];
 
-for (let i = numbers.length - 1; i >= 0; i--) {
-    reversedNumbers.push(numbers[i]);
-}
+// for (let i = numbers.length - 1; i >= 0; i--) {
+//     reversedNumbers.push(numbers[i]);
+// }
 
-console.log(reversedNumbers);
+// console.log(reversedNumbers);
+
+
+// Q#3.
+var array = [0, 1, null, 2, "", 3, undefined, 3, , , , , , 4, , 4, , 5, , 6, , , , ];
+
+var filtered = array.filter(function(el) {
+    return el != null;
+});
+
+console.log(filtered);
