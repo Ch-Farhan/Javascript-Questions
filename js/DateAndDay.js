@@ -1120,19 +1120,34 @@ numbers is same */
 // Longest String Plan
 // For this problem, we need to:
 
-function largest(arr) {
-    let i;
-    // Initialize maximum element
-    let max = arr[0];
-    // Traverse array elements 
-    // from second and compare
-    // every element with current max 
-    for (i = 1; i < arr.length; i++) {
-        if (arr[i] > max)
-            max = arr[i];
-    }
-    return max;
-}
-// Driver code
-let arr = [10, 324, 45, 90, 9808];
-document.write("<br>Largest in given array is " + largest(arr));
+// function largest(arr) {
+//     let i;
+//     // Initialize maximum element
+//     let max = arr[0];
+//     // Traverse array elements 
+//     // from second and compare
+//     // every element with current max 
+//     for (i = 1; i < arr.length; i++) {
+//         if (arr[i] > max)
+//             max = arr[i];
+//     }
+//     return max;
+// }
+// // Driver code
+// let arr = [10, 324, 45, 90, 9808];
+// document.write("<br>Largest in given array is " + largest(arr));
+
+
+// Q#2.
+const getMaxLetter = (str) => {
+    let max = 0;
+    let maxChar = '';
+    str.split('').forEach((char) => {
+        if (str.split(char).length > max) {
+            max = str.split(char).length - 1;
+            maxChar = char;
+        }
+    });
+    return `The max letter is : ${maxChar} and the max number of times it is seen is: ${max} times`;
+};
+console.log(getMaxLetter('str'));
