@@ -1084,29 +1084,55 @@ numbers is same */
 // printIntersection(arr1, arr2, m, n);
 
 // Q#10.
-var firstObject = {
-    x: 0,
-    y: 1,
-    z: 2,
+// var firstObject = {
+//     x: 0,
+//     y: 1,
+//     z: 2,
 
-    a: 10,
-    b: 20,
-    e: 30
-}
-var secondObject = {
-    x: 0,
-    y: 1,
-    z: 2,
+//     a: 10,
+//     b: 20,
+//     e: 30
+// }
+// var secondObject = {
+//     x: 0,
+//     y: 1,
+//     z: 2,
 
-    a: 10,
-    c: 20,
-    d: 30
-}
+//     a: 10,
+//     c: 20,
+//     d: 30
+// }
 
-function getIntKeys(obj1, obj2) {
-    var k1 = Object.keys(obj1);
-    return k1.filter(function(x) {
-        return obj2[x] !== undefined;
-    });
+// function getIntKeys(obj1, obj2) {
+//     var k1 = Object.keys(obj1);
+//     return k1.filter(function(x) {
+//         return obj2[x] !== undefined;
+//     });
+// }
+// alert(getIntKeys(firstObject, secondObject));
+
+
+// **********************************************************************************
+// Level up your JavaScript skills with 10 coding challenges:
+// Logic in javaScript
+
+// Q#1.
+// Longest String Plan
+// For this problem, we need to:
+
+function largest(arr) {
+    let i;
+    // Initialize maximum element
+    let max = arr[0];
+    // Traverse array elements 
+    // from second and compare
+    // every element with current max 
+    for (i = 1; i < arr.length; i++) {
+        if (arr[i] > max)
+            max = arr[i];
+    }
+    return max;
 }
-alert(getIntKeys(firstObject, secondObject));
+// Driver code
+let arr = [10, 324, 45, 90, 9808];
+document.write("<br>Largest in given array is " + largest(arr));
