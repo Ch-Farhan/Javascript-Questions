@@ -1062,23 +1062,51 @@ numbers is same */
 // m is the number of elements in arr1[]
 // n is the number of elements in arr2[]
 
-function printIntersection(arr1, arr2, m, n) {
-    var i = 0,
-        j = 0;
-    while (i < m && j < n) {
-        if (arr1[i] < arr2[j])
-            i++;
-        else if (arr2[j] < arr1[i])
-            j++;
-        else {
-            document.write(arr2[j++] + " ");
-            i++;
-        }
-    }
+// function printIntersection(arr1, arr2, m, n) {
+//     var i = 0,
+//         j = 0;
+//     while (i < m && j < n) {
+//         if (arr1[i] < arr2[j])
+//             i++;
+//         else if (arr2[j] < arr1[i])
+//             j++;
+//         else {
+//             document.write(arr2[j++] + " ");
+//             i++;
+//         }
+//     }
+// }
+// // Driver code
+// var arr1 = [1, 2, 4, 5, 6];
+// var arr2 = [2, 3, 5, 7];
+// var m = arr1.length;
+// var n = arr2.length;
+// printIntersection(arr1, arr2, m, n);
+
+// Q#10.
+var firstObject = {
+    x: 0,
+    y: 1,
+    z: 2,
+
+    a: 10,
+    b: 20,
+    e: 30
 }
-// Driver code
-var arr1 = [1, 2, 4, 5, 6];
-var arr2 = [2, 3, 5, 7];
-var m = arr1.length;
-var n = arr2.length;
-printIntersection(arr1, arr2, m, n);
+var secondObject = {
+    x: 0,
+    y: 1,
+    z: 2,
+
+    a: 10,
+    c: 20,
+    d: 30
+}
+
+function getIntKeys(obj1, obj2) {
+    var k1 = Object.keys(obj1);
+    return k1.filter(function(x) {
+        return obj2[x] !== undefined;
+    });
+}
+alert(getIntKeys(firstObject, secondObject));
