@@ -1317,43 +1317,134 @@ anagram of each other */
 
 // Q#8.
 // JavaScript program for reversing the linked list
-var head;
+// var head;
+// class Node {
+//     constructor(val) {
+//         this.data = val;
+//         this.next = null;
+//     }
+// }
+// /* Function to reverse the linked list */
+// function reverse(node) {
+//     var prev = null;
+//     var current = node;
+//     var next = null;
+//     while (current != null) {
+//         next = current.next;
+//         current.next = prev;
+//         prev = current;
+//         current = next;
+//     }
+//     node = prev;
+//     return node;
+// }
+// // prints content of double linked list
+// function printList(node) {
+//     while (node != null) {
+//         document.write(node.data + " ");
+//         node = node.next;
+//     }
+// }
+// // Driver Code
+// head = new Node(85);
+// head.next = new Node(15);
+// head.next.next = new Node(4);
+// head.next.next.next = new Node(20);
+
+// document.write("Given Linked list<br/>");
+// printList(head);
+// head = reverse(head);
+// document.write("<br/>");
+// document.write("Reversed linked list<br/> ");
+// printList(head);
+
+// Q#9.
+// Javascript program to delete every k-th Node
+// of a singly linked list.
+/* Linked list Node */
 class Node {
-    constructor(val) {
-        this.data = val;
+    constructor() {
+        this.data = 0;
         this.next = null;
     }
 }
-/* Function to reverse the linked list */
-function reverse(node) {
-    var prev = null;
-    var current = node;
-    var next = null;
-    while (current != null) {
-        next = current.next;
-        current.next = prev;
-        prev = current;
-        current = next;
+// To remove complete list (Needed for
+// case when k is 1)
+function freeList(node) {
+    while (node != null) {
+        next = node.next;
+        node = next;
     }
-    node = prev;
     return node;
 }
-// prints content of double linked list
-function printList(node) {
-    while (node != null) {
-        document.write(node.data + " ");
-        node = node.next;
+// Deletes every k-th node and
+// returns head of modified list.
+function deleteKthNode(head, k) {
+    // If linked list is empty
+    if (head == null)
+        return null;
+
+    if (k == 1) {
+        head = freeList(head);
+        return null;
+    }
+    // Initialize ptr and prev before
+    // starting traversal.
+    var ptr = head,
+        prev = null;
+    // Traverse list and delete
+    // every k-th node
+    var count = 0;
+    while (ptr != null) {
+        // increment Node count
+        count++;
+        // check if count is equal to k
+        // if yes, then delete current Node
+        if (k == count) {
+            // put the next of current Node in
+            // the next of previous Node
+            prev.next = ptr.next;
+
+            // set count = 0 to reach further
+            // k-th Node
+            count = 0;
+        }
+
+        // update prev if count is not 0
+        if (count != 0)
+            prev = ptr;
+
+        ptr = prev.next;
+    }
+    return head;
+}
+/* Function to print linked list */
+function displayList(head) {
+    temp = head;
+    while (temp != null) {
+        document.write(temp.data + " ");
+        temp = temp.next;
     }
 }
-// Driver Code
-head = new Node(85);
-head.next = new Node(15);
-head.next.next = new Node(4);
-head.next.next.next = new Node(20);
+// Utility function to create a new node.
+function newNode(x) {
+    temp = new Node();
+    temp.data = x;
+    temp.next = null;
+    return temp;
+}
+// Driver Code	
+/* Start with the empty list */
+head = newNode(1);
+head.next = newNode(2);
+head.next.next = newNode(3);
+head.next.next.next = newNode(4);
+head.next.next.next.next = newNode(5);
+head.next.next.next.next.next = newNode(6);
+head.next.next.next.next.next.next = newNode(7);
+head.next.next.next.next.next.next.next = newNode(8);
 
-document.write("Given Linked list<br/>");
-printList(head);
-head = reverse(head);
-document.write("<br/>");
-document.write("Reversed linked list<br/> ");
-printList(head);
+var k = 3;
+head = deleteKthNode(head, k);
+
+displayList(head);
