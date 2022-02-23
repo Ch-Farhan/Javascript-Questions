@@ -1159,32 +1159,57 @@ numbers is same */
 
 /* function to check whether two strings are
 anagram of each other */
-function areAnagram(str1, str2) {
-    // Get lengths of both strings
-    let n1 = str1.length;
-    let n2 = str2.length;
+// function areAnagram(str1, str2) {
+//     // Get lengths of both strings
+//     let n1 = str1.length;
+//     let n2 = str2.length;
 
-    // If length of both strings is not same,
-    // then they cannot be anagram
-    if (n1 != n2)
-        return false;
-    // Sort both strings
-    str1.sort();
-    str2.sort()
-        // Compare sorted strings
-    for (let i = 0; i < n1; i++)
-        if (str1[i] != str2[i])
-            return false;
-    return true;
-}
-/* Driver Code*/
-let str1 = ['t', 'e', 's', 't'];
-let str2 = ['t', 't', 'e', 'w'];
-// let str2 = ['t', 'e', 's', 't'];
-// Function Call
-if (areAnagram(str1, str2))
-    document.write("The two strings are" +
-        " anagram of each other<br>");
-else
-    document.write("The two strings are not" +
-        " anagram of each other<br>");
+//     // If length of both strings is not same,
+//     // then they cannot be anagram
+//     if (n1 != n2)
+//         return false;
+//     // Sort both strings
+//     str1.sort();
+//     str2.sort()
+//         // Compare sorted strings
+//     for (let i = 0; i < n1; i++)
+//         if (str1[i] != str2[i])
+//             return false;
+//     return true;
+// }
+// /* Driver Code*/
+// let str1 = ['t', 'e', 's', 't'];
+// let str2 = ['t', 't', 'e', 'w'];
+// // let str2 = ['t', 'e', 's', 't'];
+// // Function Call
+// if (areAnagram(str1, str2))
+//     document.write("The two strings are" +
+//         " anagram of each other<br>");
+// else
+//     document.write("The two strings are not" +
+//         " anagram of each other<br>");
+
+// Q#4.
+const str = 'Farhan';
+const canFormPalindrome = (str = '') => {
+    const hash = {};
+    let count = 0;
+    for (let i = 0; i < str.length; i++) {
+        let c = str[i];
+        if (c === ' ') {
+            continue;
+        };
+        if (hash[c]) {
+            delete hash[c];
+        } else {
+            hash[c] = true;
+        };
+        count++;
+    };
+    if (count % 2 === 0) {
+        return Object.keys(hash).length === 0;
+    } else {
+        return Object.keys(hash).length === 1;
+    };
+};
+console.log(canFormPalindrome(str));
