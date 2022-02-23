@@ -1218,49 +1218,68 @@ anagram of each other */
 // Javascript program for checking
 // balanced brackets
 // Function to check if brackets are balanced
-function areBracketsBalanced(expr) {
-    // Using ArrayDeque is faster
-    // than using Stack class
-    let stack = [];
-    // Traversing the Expression
-    for (let i = 0; i < expr.length; i++) {
-        let x = expr[i];
-        if (x == '(' || x == '[' || x == '{') {
-            // Push the element in the stack
-            stack.push(x);
-            continue;
-        }
-        // If current character is not opening
-        // bracket, then it must be closing.
-        // So stack cannot be empty at this point.
-        if (stack.length == 0)
-            return false;
-        let check;
-        switch (x) {
-            case ')':
-                check = stack.pop();
-                if (check == '{' || check == '[')
-                    return false;
-                break;
-            case '}':
-                check = stack.pop();
-                if (check == '(' || check == '[')
-                    return false;
-                break;
-            case ']':
-                check = stack.pop();
-                if (check == '(' || check == '{')
-                    return false;
-                break;
-        }
+// function areBracketsBalanced(expr) {
+//     // Using ArrayDeque is faster
+//     // than using Stack class
+//     let stack = [];
+//     // Traversing the Expression
+//     for (let i = 0; i < expr.length; i++) {
+//         let x = expr[i];
+//         if (x == '(' || x == '[' || x == '{') {
+//             // Push the element in the stack
+//             stack.push(x);
+//             continue;
+//         }
+//         // If current character is not opening
+//         // bracket, then it must be closing.
+//         // So stack cannot be empty at this point.
+//         if (stack.length == 0)
+//             return false;
+//         let check;
+//         switch (x) {
+//             case ')':
+//                 check = stack.pop();
+//                 if (check == '{' || check == '[')
+//                     return false;
+//                 break;
+//             case '}':
+//                 check = stack.pop();
+//                 if (check == '(' || check == '[')
+//                     return false;
+//                 break;
+//             case ']':
+//                 check = stack.pop();
+//                 if (check == '(' || check == '{')
+//                     return false;
+//                 break;
+//         }
+//     }
+//     // Check Empty Stack
+//     return (stack.length == 0);
+// }
+// // Driver code
+// let expr = "([{}])";
+// // Function call
+// if (areBracketsBalanced(expr))
+//     document.write("Balanced ");
+// else
+//     document.write("Not Balanced ");
+
+// Q#6.
+function armstr() {
+    var arm = 0,
+        a, b, c, d, num;
+    num = Number(document.getElementById("no_input").value);
+
+    temp = num;
+    while (temp > 0) {
+        a = temp % 10;
+        temp = parseInt(temp / 10); // convert float into Integer
+        arm = arm + a * a * a;
     }
-    // Check Empty Stack
-    return (stack.length == 0);
+    if (arm == num) {
+        alert("True! Armstrong number");
+    } else {
+        alert("False! Not Armstrong number");
+    }
 }
-// Driver code
-let expr = "([{}])";
-// Function call
-if (areBracketsBalanced(expr))
-    document.write("Balanced ");
-else
-    document.write("Not Balanced ");
