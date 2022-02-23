@@ -1362,89 +1362,142 @@ anagram of each other */
 // Javascript program to delete every k-th Node
 // of a singly linked list.
 /* Linked list Node */
+
+// class Node {
+//     constructor() {
+//         this.data = 0;
+//         this.next = null;
+//     }
+// }
+// // To remove complete list (Needed for
+// // case when k is 1)
+// function freeList(node) {
+//     while (node != null) {
+//         next = node.next;
+//         node = next;
+//     }
+//     return node;
+// }
+// // Deletes every k-th node and
+// // returns head of modified list.
+// function deleteKthNode(head, k) {
+//     // If linked list is empty
+//     if (head == null)
+//         return null;
+
+//     if (k == 1) {
+//         head = freeList(head);
+//         return null;
+//     }
+//     // Initialize ptr and prev before
+//     // starting traversal.
+//     var ptr = head,
+//         prev = null;
+//     // Traverse list and delete
+//     // every k-th node
+//     var count = 0;
+//     while (ptr != null) {
+//         // increment Node count
+//         count++;
+//         // check if count is equal to k
+//         // if yes, then delete current Node
+//         if (k == count) {
+//             // put the next of current Node in
+//             // the next of previous Node
+//             prev.next = ptr.next;
+
+//             // set count = 0 to reach further
+//             // k-th Node
+//             count = 0;
+//         }
+
+//         // update prev if count is not 0
+//         if (count != 0)
+//             prev = ptr;
+
+//         ptr = prev.next;
+//     }
+//     return head;
+// }
+// /* Function to print linked list */
+// function displayList(head) {
+//     temp = head;
+//     while (temp != null) {
+//         document.write(temp.data + " ");
+//         temp = temp.next;
+//     }
+// }
+// // Utility function to create a new node.
+// function newNode(x) {
+//     temp = new Node();
+//     temp.data = x;
+//     temp.next = null;
+//     return temp;
+// }
+// // Driver Code	
+// /* Start with the empty list */
+// head = newNode(1);
+// head.next = newNode(2);
+// head.next.next = newNode(3);
+// head.next.next.next = newNode(4);
+// head.next.next.next.next = newNode(5);
+// head.next.next.next.next.next = newNode(6);
+// head.next.next.next.next.next.next = newNode(7);
+// head.next.next.next.next.next.next.next = newNode(8);
+
+// var k = 3;
+// head = deleteKthNode(head, k);
+
+// displayList(head);
+
+// Q#10.
+// javascript program to check if
+// linked list is circular
+
+/* Link list Node */
 class Node {
-    constructor() {
-        this.data = 0;
+    constructor(val) {
+        this.data = val;
         this.next = null;
     }
 }
-// To remove complete list (Needed for
-// case when k is 1)
-function freeList(node) {
-    while (node != null) {
-        next = node.next;
-        node = next;
-    }
-    return node;
-}
-// Deletes every k-th node and
-// returns head of modified list.
-function deleteKthNode(head, k) {
-    // If linked list is empty
+/*
+ * This function returns true if given linked list is circular, else false.
+ */
+function isCircular(head) {
+    // An empty linked list is circular
     if (head == null)
-        return null;
+        return true;
 
-    if (k == 1) {
-        head = freeList(head);
-        return null;
-    }
-    // Initialize ptr and prev before
-    // starting traversal.
-    var ptr = head,
-        prev = null;
-    // Traverse list and delete
-    // every k-th node
-    var count = 0;
-    while (ptr != null) {
-        // increment Node count
-        count++;
-        // check if count is equal to k
-        // if yes, then delete current Node
-        if (k == count) {
-            // put the next of current Node in
-            // the next of previous Node
-            prev.next = ptr.next;
+    // Next of head
+    node = head.next;
 
-            // set count = 0 to reach further
-            // k-th Node
-            count = 0;
-        }
+    // This loop would stop in both cases (1) If
+    // Circular (2) Not circular
+    while (node != null && node != head)
+        node = node.next;
 
-        // update prev if count is not 0
-        if (count != 0)
-            prev = ptr;
-
-        ptr = prev.next;
-    }
-    return head;
-}
-/* Function to print linked list */
-function displayList(head) {
-    temp = head;
-    while (temp != null) {
-        document.write(temp.data + " ");
-        temp = temp.next;
-    }
+    // If loop stopped because of circular
+    // condition
+    return (node == head);
 }
 // Utility function to create a new node.
-function newNode(x) {
+function newNode(data) {
     temp = new Node();
-    temp.data = x;
+    temp.data = data;
     temp.next = null;
     return temp;
 }
-// Driver Code	
+/* Driver code */
 /* Start with the empty list */
 head = newNode(1);
 head.next = newNode(2);
 head.next.next = newNode(3);
 head.next.next.next = newNode(4);
-head.next.next.next.next = newNode(5);
-head.next.next.next.next.next = newNode(6);
-head.next.next.next.next.next.next = newNode(7);
-head.next.next.next.next.next.next.next = newNode(8);
 
-var k = 3;
-head = deleteKthNode(head, k);
+document.write(isCircular(head) ? "Yes<br/>" : "No<br/>");
 
-displayList(head);
+// Making linked list circular
+head.next.next.next.next = head;
+
+document.write(isCircular(head) ? "Yes<br/>" : "No<br/>");
