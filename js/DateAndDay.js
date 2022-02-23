@@ -1266,20 +1266,51 @@ anagram of each other */
 //     document.write("Not Balanced ");
 
 // Q#6.
-function armstr() {
-    var arm = 0,
-        a, b, c, d, num;
-    num = Number(document.getElementById("no_input").value);
+// function armstr() {
+//     var arm = 0,
+//         a, b, c, d, num;
+//     num = Number(document.getElementById("no_input").value);
 
-    temp = num;
-    while (temp > 0) {
-        a = temp % 10;
-        temp = parseInt(temp / 10); // convert float into Integer
-        arm = arm + a * a * a;
+//     temp = num;
+//     while (temp > 0) {
+//         a = temp % 10;
+//         temp = parseInt(temp / 10); // convert float into Integer
+//         arm = arm + a * a * a;
+//     }
+//     if (arm == num) {
+//         alert("True! Armstrong number");
+//     } else {
+//         alert("False! Not Armstrong number");
+//     }
+// }
+
+// Q#7.
+let employees = [{
+        firstName: 'John',
+        lastName: 'Doe',
+        age: 27,
+        joinedDate: 'December 15, 2017'
+    },
+
+    {
+        firstName: 'Ana',
+        lastName: 'Rosy',
+        age: 25,
+        joinedDate: 'January 15, 2019'
+    },
+
+    {
+        firstName: 'Zion',
+        lastName: 'Albert',
+        age: 30,
+        joinedDate: 'February 15, 2011'
     }
-    if (arm == num) {
-        alert("True! Armstrong number");
-    } else {
-        alert("False! Not Armstrong number");
-    }
-}
+];
+// Sort an array of objects by numbers
+employees.sort((a, b) => {
+    return a.age - b.age;
+});
+// To display the employees, you use the forEach() method:
+employees.forEach((e) => {
+    console.log(`${e.firstName} ${e.lastName} ${e.age}`);
+});
