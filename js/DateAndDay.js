@@ -1285,32 +1285,75 @@ anagram of each other */
 // }
 
 // Q#7.
-let employees = [{
-        firstName: 'John',
-        lastName: 'Doe',
-        age: 27,
-        joinedDate: 'December 15, 2017'
-    },
+// let employees = [{
+//         firstName: 'John',
+//         lastName: 'Doe',
+//         age: 27,
+//         joinedDate: 'December 15, 2017'
+//     },
 
-    {
-        firstName: 'Ana',
-        lastName: 'Rosy',
-        age: 25,
-        joinedDate: 'January 15, 2019'
-    },
+//     {
+//         firstName: 'Ana',
+//         lastName: 'Rosy',
+//         age: 25,
+//         joinedDate: 'January 15, 2019'
+//     },
 
-    {
-        firstName: 'Zion',
-        lastName: 'Albert',
-        age: 30,
-        joinedDate: 'February 15, 2011'
+//     {
+//         firstName: 'Zion',
+//         lastName: 'Albert',
+//         age: 30,
+//         joinedDate: 'February 15, 2011'
+//     }
+// ];
+// // Sort an array of objects by numbers
+// employees.sort((a, b) => {
+//     return a.age - b.age;
+// });
+// // To display the employees, you use the forEach() method:
+// employees.forEach((e) => {
+//     console.log(`${e.firstName} ${e.lastName} ${e.age}`);
+// });
+
+// Q#8.
+// JavaScript program for reversing the linked list
+var head;
+class Node {
+    constructor(val) {
+        this.data = val;
+        this.next = null;
     }
-];
-// Sort an array of objects by numbers
-employees.sort((a, b) => {
-    return a.age - b.age;
-});
-// To display the employees, you use the forEach() method:
-employees.forEach((e) => {
-    console.log(`${e.firstName} ${e.lastName} ${e.age}`);
-});
+}
+/* Function to reverse the linked list */
+function reverse(node) {
+    var prev = null;
+    var current = node;
+    var next = null;
+    while (current != null) {
+        next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
+    }
+    node = prev;
+    return node;
+}
+// prints content of double linked list
+function printList(node) {
+    while (node != null) {
+        document.write(node.data + " ");
+        node = node.next;
+    }
+}
+// Driver Code
+head = new Node(85);
+head.next = new Node(15);
+head.next.next = new Node(4);
+head.next.next.next = new Node(20);
+
+document.write("Given Linked list<br/>");
+printList(head);
+head = reverse(head);
+document.write("<br/>");
+document.write("Reversed linked list<br/> ");
+printList(head);
